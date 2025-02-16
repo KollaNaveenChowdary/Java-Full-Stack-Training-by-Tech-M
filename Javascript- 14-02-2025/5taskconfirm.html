@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Film Confirmation</title>
+</head>
+<body>
+    <h2>JavaScript Confirmation Box</h2>
+    <button onclick="checkFilm()">Will you go to the film today?</button>
+    <p id="result"></p>
+
+    <script>
+        function checkFilm() {
+            let decision = confirm("Will you go to the film today?");
+            if (decision) {
+                document.getElementById("result").innerHTML = "Great! Enjoy your movie!";
+            } else {
+                document.getElementById("result").innerHTML = "Maybe next time!";
+            }
+        }
+    </script>
+</body>
+</html>

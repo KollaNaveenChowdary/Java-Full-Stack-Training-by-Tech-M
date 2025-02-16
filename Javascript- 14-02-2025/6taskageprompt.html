@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Prompt</title>
+</head>
+<body>
+    <h2>JavaScript Prompt Box</h2>
+    <button onclick="getAge()">Enter Your Age</button>
+    <p id="ageResult"></p>
+
+    <script>
+        function getAge() {
+            let age = prompt("Please enter your age:");
+            if (age && !isNaN(age)) {
+                document.getElementById("ageResult").innerHTML = "Your age is: " + age;
+            } else {
+                document.getElementById("ageResult").innerHTML = "Invalid input. Please enter a valid age.";
+            }
+        }
+    </script>
+</body>
+</html>

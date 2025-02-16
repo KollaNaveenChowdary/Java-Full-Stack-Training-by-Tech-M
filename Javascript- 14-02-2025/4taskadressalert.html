@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Address Alert</title>
+</head>
+<body>
+    <h2>JavaScript Alert Box</h2>
+    <button onclick="getAddress()">Enter Your Address</button>
+
+    <script>
+        function getAddress() {
+            let address = prompt("Please enter your address:");
+            if (address) {
+                alert("Your address is: " + address);
+            } else {
+                alert("You didn't enter an address.");
+            }
+        }
+    </script>
+</body>
+</html>
