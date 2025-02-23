@@ -1,0 +1,11 @@
+<web-app xmlns="http://java.sun.com/xml/ns/javaee" version="3.0">
+    <servlet>
+        <servlet-name>jspcount</servlet-name>
+        <jsp-file>/jspcount.jsp</jsp-file>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>jspcount</servlet-name>
+        <url-pattern>/jspcount/*</url-pattern>
+    </servlet-mapping>
+</web-app>
