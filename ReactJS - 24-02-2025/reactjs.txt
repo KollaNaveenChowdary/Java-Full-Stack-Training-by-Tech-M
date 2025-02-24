@@ -1,0 +1,118 @@
+Function Component
+~~~~~~~~~~~~~~~~~~
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+
+function Mobile() {
+  return <h2>Mobile Component!</h2>;
+}
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<Mobile />);
+
+
+
+
+
+Function Component with props
+~~~~~~~~~~~~~~~~~~
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+
+function Mobile(props) {
+  return <h2>{props.model} Mobile Component !!</h2>;
+}
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<Mobile  model="ABCD"/>);
+
+
+
+Class Component
+~~~~~~~~~~~~~~~~~~
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+
+class Mobile extends React.Component {
+  render() {
+    return <h2> Mobile Component !!</h2>;
+  }
+}
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<Mobile  />);
+
+
+
+
+
+Class Component with props
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+
+class Mobile extends React.Component {
+  render() {
+    return <h2>{this.props.model} Mobile Component !!</h2>;
+  }
+}
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<Mobile  model="ABCD"/>);
+
+
+
+
+Components within Components
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+
+function Mobile() {
+  return <h2>Mobile Component!</h2>;
+}
+
+function ShowRoom() {
+  return (
+    <>
+	    <h1>In Poorvika!!!</h1>
+	    <Mobile />
+    </>
+  );
+}
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<ShowRoom />);
+
+
+
+
+Composition of Components
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+
+function Mobile1() {
+  return <h2>Mobile Component1!</h2>;
+}
+
+function Mobile2() {
+  return <h2>Mobile Component2!</h2>;
+}
+
+function Mobile3() {
+  return <h2>Mobile Component3!</h2>;
+}
+function ShowRoom() {
+  return (
+    <div>
+	    <Mobile1 />
+         <Mobile2 />
+         <Mobile3 />   
+    </div>
+  );
+}
+
+const root = ReactDOM.createRoot(document.getElementById('root'))
